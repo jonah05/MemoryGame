@@ -1,0 +1,44 @@
+h4{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    transform: rotate(0deg);
+    color: black;
+    font-style: italic;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  .game_board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolona për të krijuar 4 rreshta */
+    gap: 20px; /* hapësira më e madhe mes kartave */
+    max-width: 800px; /* mund të përshtatet për të qenë më e gjerë */
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.card {
+    width: 200px; /* rritet madhësia e kartave */
+    height: 260px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+     /* imazhi do të mbushë hapësirën e kartës pa u shtrembëruar, por pa u prerë */
+    object-position: center; /* pozicionon imazhin në qendër të kartës */
+}
+
+.card:hover {
+    transform: scale(1.05); /* efekt i vogël për t'u zmadhuar kur kalon mbi të */
+}
