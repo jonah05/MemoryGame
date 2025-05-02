@@ -1,44 +1,104 @@
-h4{
-    text-align: center;
-    font-size: 60px;
-    font-weight: bold;
-    transform: rotate(0deg);
-    color: black;
-    font-style: italic;
-}
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-  }
+   
+    
+   
+}
 
-  .game_board {
+h4 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    font-style: italic;
+    margin-top: 0;
+}
+
+#attempts {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.game_board {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px; 
-    max-width: 800px; 
+    gap: 20px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 10px;
 }
 
 .card {
-    width: 200px; 
-    height: 260px;
+    width: 200px;
+    height: 240px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    perspective: 1000px; 
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    transition: transform 0.5s; 
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+}
+
+.card-front {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg); 
+}
+
+.card-back {
+    background-color: #bbb;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.card img {
+.card-front, .card-back {
+    position: absolute;
     width: 100%;
     height: 100%;
-     
-    object-position: center; 
+    backface-visibility: hidden; 
 }
 
-.card:hover {
-    transform: scale(1.05); 
+.card-front img, .card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg); 
+}
+
+#restartBtn {
+    padding: 10px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+#restartBtn:hover {
+    background-color: #45a049;
 }

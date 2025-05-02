@@ -1,38 +1,101 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Memory Game</title>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="index.css">
-
-    </head>
-    <body>
-        <h4>Jona's Memory Card Game</h4>
-        <div class="game_board" id="board">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h4>Jona's Memory Card Game</h4>
+    <p id="attempts" style="text-align:center; font-size:18px; margin-top: 20px;">Attempts: 0</p>
+    <div class="game_board" id="board">
+        <!-- Kartat -->
         <div class="card" data-icon="burger">
-            <img src="gameImages/cardBack.png" alt="card back"></div>
-            <div class="card" data-icon="pita">
-                <img src="gameImages/cardBack.png" alt="card back">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gameImages/burger.png" alt="burger">
+                </div>
+                <div class="card-back">
+                    <img src="gameImages/cardBack.png" alt="card back">
+                </div>
+            </div>
+        </div>
+        <!-- Kartat e tjera (dublikimi i kartave për të pasur dy për secilën) -->
+        <div class="card" data-icon="pita">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gameImages/pita.png" alt="burger">
+                </div>
+                <div class="card-back">
+                    <img src="gameImages/cardBack.png" alt="card back">
+                </div>
+            </div>
         </div>
         <div class="card" data-icon="sandwich">
-            <img src="gameImages/cardBack.png" alt="card back">
-    </div>
-    <div class="card" data-icon="tortilla">
-        <img src="gameImages/cardBack.png" alt="card back">
-    </div>
-    <div class="card" data-icon="burger">
-        <img src="gameImages/cardBack.png" alt="card back"></div>
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gameImages/sandwich.png" alt="burger">
+                </div>
+                <div class="card-back">
+                    <img src="gameImages/cardBack.png" alt="card back">
+                </div>
+            </div>
+        </div>
+        <div class="card" data-icon="tortilla">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gameImages/tortilla.png" alt="burger">
+                </div>
+                <div class="card-back">
+                    <img src="gameImages/cardBack.png" alt="card back">
+                </div>
+            </div>
+        </div>
+        <div class="card" data-icon="burger">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gameImages/burger.png" alt="burger">
+                </div>
+                <div class="card-back">
+                    <img src="gameImages/cardBack.png" alt="card back">
+                </div>
+            </div>
+        </div>
         <div class="card" data-icon="pita">
-            <img src="gameImages/cardBack.png" alt="card back">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gameImages/pita.png" alt="burger">
+                </div>
+                <div class="card-back">
+                    <img src="gameImages/cardBack.png" alt="card back">
+                </div>
+            </div>
+        </div>
+        <div class="card" data-icon="sandwich">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gameImages/sandwich.png" alt="burger">
+                </div>
+                <div class="card-back">
+                    <img src="gameImages/cardBack.png" alt="card back">
+                </div>
+            </div>
+        </div>
+        <div class="card" data-icon="tortilla">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gameImages/tortilla.png" alt="burger">
+                </div>
+                <div class="card-back">
+                    <img src="gameImages/cardBack.png" alt="card back">
+                </div>
+            </div>
+       
     </div>
-    <div class="card" data-icon="sandwich">
-        <img src="gameImages/cardBack.png" alt="card back">
-</div>
-<div class="card" data-icon="tortilla">
-    <img src="gameImages/cardBack.png" alt="card back">
-</div>
-    </div>
-        <script src="index.js"></script>
-    </body>
+    <div id="gameMessage" style="display: none; text-align: center; font-size: 30px; color: green; font-weight: bold;"></div>
+
+    <button id="restartBtn">Restart Game</button>
+    <script src="index.js"></script>
+</body>
 </html>
